@@ -6,6 +6,5 @@ jobs:
     steps:
       - name: Build the project
         run : bun run build
-    steps:
       - name: Test the project
         run: bun run test

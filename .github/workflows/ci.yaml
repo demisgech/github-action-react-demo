@@ -1,0 +1,11 @@
+name: Build and Test
+on: push
+jobs:
+  Build&Test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build the project
+        run : bun run build
+    steps:
+      - name: Test the project
+        run: bun run test

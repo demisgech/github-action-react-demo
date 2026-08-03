@@ -10,6 +10,9 @@ jobs:
             - name: Output event data
               run: echo "${{ toJson(github.event)}}"
             
+            - name: Get Actions
+              uses: actions/checkout@v6
+            
             - name: Get code
               uses: oven-sh/setup-bun@v2
               with:

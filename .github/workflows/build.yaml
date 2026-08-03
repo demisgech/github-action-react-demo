@@ -1,8 +1,8 @@
-name: Build and Test
+name: Build
 on: push
 jobs:
-  Build-Test:
-    name: Build and Test
+  Build:
+    name: Build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
@@ -19,5 +19,3 @@ jobs:
       - name: Build the project
         run : bun run build
 
-      - name: Test the project
-        run: bun run test

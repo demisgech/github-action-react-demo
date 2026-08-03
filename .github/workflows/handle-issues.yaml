@@ -1,0 +1,16 @@
+name: Handle GitHub Issues
+on: 
+    issues:
+        types: [opened, closed]
+jobs:
+    HandleIssues:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Get Code
+              uses: actions/checkout@v6
+
+            - name: Show Events
+              run: echo "${{toJson(github.event)}}"
+            
+            - name: Show Executing Jobs
+              run: echo "${{toJson(job)}}"

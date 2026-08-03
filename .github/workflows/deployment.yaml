@@ -23,6 +23,7 @@ jobs:
               run: bun run test
     
     Deploy:
+        needs: Test
         runs-on: ubuntu-latest
         steps:
             - name: Get Code

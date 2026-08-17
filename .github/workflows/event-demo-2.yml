@@ -29,6 +29,10 @@ jobs:
             
             - name: Install dependencies
               run: bun install --frozen-lockfile --ignore-scripts
+              
+
+            - name: Run required Bun postinstall
+              run: cd node_modules/bun && node install.js
             
             - name: Test code
               run: bun run build
